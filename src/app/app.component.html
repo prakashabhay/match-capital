@@ -1,0 +1,7 @@
+<div *ngFor="let item of countryList">
+  <button class="country" (click)="selectCountry(item[0], null)">
+    {{ item[0] }}
+  </button>
+  <button (click)="selectCountry(null, item[1])">{{ item[1] }}</button>
+</div>
+<p *ngIf="countryList.length === 0">Congratulations</p>
